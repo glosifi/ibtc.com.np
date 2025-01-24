@@ -30,6 +30,10 @@ body {
     flex: 1 1 100%;
     padding-right: 0;
   }
+
+  .hero-image-container {
+    display: none; /* Hide the image on mobile */
+  }
 }
 
 /* Stack text and image on tablet screens */
@@ -43,7 +47,8 @@ body {
   }
 
   .hero-image-container {
-    margin-top: 20px; /* Add some space between text and image */
+    height: 40vh; /* Reduce image height when stacked */
+    margin-top: 20px; /* Add space between text and image */
   }
 }
 
@@ -2589,16 +2594,16 @@ h1 .divider-lg {
 
 .button-primary,
 .button-primary:focus {
-  color: #151515;
-  background-color: #cef1ea;
-  border-color: #cef1ea;
+  color: #ffffff;
+  background-color: #615148;
+  border-color: #615148;
 }
 
 .button-primary:hover,
 .button-primary:active {
-  color: #151515;
-  background-color: #b4e5db;
-  border-color: #b4e5db;
+  color: #ffffff;
+  background-color: #65564E;
+  border-color: #65564E;
 }
 
 .button-primary.button-ujarak::before {
@@ -7116,7 +7121,7 @@ html.tablet .ui-to-top {
   line-height: 1.2;
   transition: 0.25s;
   letter-spacing: 0.05em;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .rd-navbar-static .rd-nav-link:before {
@@ -7957,6 +7962,7 @@ html.rd-navbar-fixed-linked .page {
 *
 * RD Navbar Sidebar
 */
+
 .rd-navbar-sidebar {
   display: block;
   background: transparent;
@@ -8706,7 +8712,7 @@ html.rd-navbar-fixed-linked .page {
 * =====================================================
 */
 .rd-navbar-main-outer {
-  background-color: #ebbbb0;
+  background-color: #F1DECE;
   padding: 10px 0;
 }
 
