@@ -2479,8 +2479,8 @@ h1 .divider-lg {
 .button-primary:hover,
 .button-primary:active {
   color: #ffffff;
-  background-color: #65564E;
-  border-color: #65564E;
+  background-color: #65564e;
+  border-color: #65564e;
 }
 
 .button-primary.button-ujarak::before {
@@ -5107,18 +5107,18 @@ h3 + img {
 }
 
 .section-xs {
-  padding: 25px 0;
+  padding: 10px 0;
 }
 
 .section-xs-type-1 {
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .section-sm,
 .section-md,
 .section-lg,
 .section-xl {
-  padding: 50px 0;
+  padding: 15px 0;
 }
 
 .section-collapse + .section-collapse {
@@ -5139,40 +5139,40 @@ html [class*="section-"].section-bottom-0 {
   section.section-lg:first-of-type,
   section.section-xl:first-of-type,
   section.section-xxl:first-of-type {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 }
 
 @media (min-width: 768px) {
   .section-sm {
-    padding: 60px 0;
+    padding: 20px 0;
   }
   .section-md {
-    padding: 70px 0;
+    padding: 20px 0;
   }
   .section-lg {
-    padding: 85px 0;
+    padding: 25px 0;
   }
 }
 
 @media (min-width: 992px) {
   .section-md {
-    padding: 80px 0 90px;
+    padding: 20px 0 30px;
   }
   .section-lg {
-    padding: 100px 0;
+    padding: 40px 0;
   }
   .section-xl {
-    padding: 120px 0;
+    padding: 60px 0;
   }
 }
 
 @media (min-width: 1200px) {
   .section-lg {
-    padding: 115px 0;
+    padding: 55px 0;
   }
   .section-xl {
-    padding: 140px 0;
+    padding: 80px 0;
   }
 }
 
@@ -5628,8 +5628,8 @@ html [class*="section-"].section-bottom-0 {
 /**
 * Light Backgrounds
 */
-.bg-default {
-  background-color: #ffffff;
+.bg-footer {
+  background-color: #f1dece;
 }
 
 .bg-default + .bg-default {
@@ -5828,19 +5828,7 @@ html [class*="section-"].section-bottom-0 {
   margin-top: 30px;
 }
 
-p.rights {
-  font-size: 16px;
-  color: #9b9b9b;
-  letter-spacing: 0.05em;
-}
 
-p.rights a {
-  color: inherit;
-}
-
-p.rights a:hover {
-  text-decoration: underline;
-}
 
 [style*="z-index: 1000;"] {
   z-index: 1101 !important;
@@ -8184,9 +8172,6 @@ html.rd-navbar-fixed-linked .page {
 * RD Navbar Classic
 * =====================================================
 */
-.rd-navbar-classic.rd-navbar-static {
-  border-bottom: 1px solid transparent;
-}
 
 .rd-navbar-classic.rd-navbar-static .rd-navbar-aside-outer,
 .rd-navbar-classic.rd-navbar-static .rd-navbar-main-outer {
@@ -8330,7 +8315,7 @@ html.rd-navbar-fixed-linked .page {
 * =====================================================
 */
 .rd-navbar-main-outer {
-  background-color: #F1DECE;
+  background-color: #f1dece;
   padding: 10px 0;
 }
 
@@ -11786,7 +11771,7 @@ yx-axis
   height: 60px;
   transition: all 0.3s;
   color: rgba(255, 255, 255, 0.6);
-  background: #AD9789;
+  background: #ad9789;
 }
 
 .owl-carousel-center .owl-prev:before,
@@ -11804,7 +11789,7 @@ yx-axis
 .owl-carousel-center .owl-prev:focus,
 .owl-carousel-center .owl-next:hover,
 .owl-carousel-center .owl-next:focus {
-  background: #CEA39C;
+  background: #cea39c;
   color: #ffffff;
 }
 
@@ -15480,4 +15465,102 @@ html[class*="ie"] .dtp-hour-hand {
 
 .dtp .right {
   right: 20px;
+}
+
+/* Footer Styling */
+.footer-minimal {
+  padding: 50px 0;
+  background-color: #CEA39C;
+  color: #fff;
+}
+
+@media (max-width: 576px) {
+  .footer-minimal {
+    padding: 20px 0;
+  } 
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  margin-bottom: 20px;
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #615148;
+}
+
+.footer-social a {
+  color: #000;
+  margin-right: 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #615148;
+}
+
+.rights {
+  margin-top: 20px;
+  font-size: 14px;
+  color: 615148;
+}
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-brand img {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+} */
+
+@media (max-width: 576px) {
+  .footer-social a {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .footer-column h4 {
+    font-size: 16px;
+  }
+
+  .footer-column ul li {
+    font-size: 14px;
+  }
 }
