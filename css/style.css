@@ -12,9 +12,9 @@
     flex: 1 1 100%;
     padding-right: 0;
   }
-
   .hero-image-container {
-    display: none; /* Hide the image on mobile */
+    height: 20vh; /* Reduce image height when stacked */
+    margin-top: 10px; /* Add space between text and image */
   }
 }
 
@@ -134,7 +134,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: #9b9b9b;
+  color: #000000;
   background-color: #ffffff;
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -410,7 +410,7 @@ a:hover {
 a,
 a:focus,
 a:active {
-  color: #cef1ea;
+  color: #65564E;
 }
 
 a:hover {
@@ -2380,7 +2380,7 @@ hr {
   display: inline-block;
   width: 60px;
   height: 3px;
-  background-color: #cef1ea;
+  background-color: #65564e;
 }
 
 .divider-lg::after {
@@ -2388,7 +2388,7 @@ hr {
   display: inline-block;
   width: 90px;
   height: 3px;
-  background-color: #cef1ea;
+  background-color: #65564e;
 }
 
 h1 .divider-lg {
@@ -5827,8 +5827,6 @@ html [class*="section-"].section-bottom-0 {
 * + .text-decoration-lines {
   margin-top: 30px;
 }
-
-
 
 [style*="z-index: 1000;"] {
   z-index: 1101 !important;
@@ -15477,7 +15475,7 @@ html[class*="ie"] .dtp-hour-hand {
 @media (max-width: 576px) {
   .footer-minimal {
     padding: 20px 0;
-  } 
+  }
 }
 
 .footer-columns {
@@ -15530,7 +15528,7 @@ html[class*="ie"] .dtp-hour-hand {
 .rights {
   margin-top: 20px;
   font-size: 14px;
-  color: 615148;
+  color: #615148;
 }
 
 /* Responsive Design */
