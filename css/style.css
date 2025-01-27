@@ -411,7 +411,7 @@ a:hover {
 a,
 a:focus,
 a:active {
-  color: #65564E;
+  color: #65564e;
 }
 
 a:hover {
@@ -8313,7 +8313,7 @@ html.rd-navbar-fixed-linked .page {
 * =====================================================
 */
 .rd-navbar-main-outer {
-  background-color: #f1dece;
+  background-color: #fff;
   padding: 10px 0;
 }
 
@@ -15561,4 +15561,39 @@ html[class*="ie"] .dtp-hour-hand {
   .footer-column ul li {
     font-size: 14px;
   }
+}
+
+.category-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h4 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.category-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.category-list li {
+  font-size: 18px;
+  color: #555;
+  padding: 10px;
+  background-color:rgba(147, 147, 147, 0.7);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.category-list li:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
 }
