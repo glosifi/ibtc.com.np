@@ -76,6 +76,16 @@ ol {
   margin: 0;
 }
 
+.gap {
+  gap: 50px;
+}
+
+@media (max-width: 480px) {
+  .gap {
+    gap: 0px;
+  }
+}
+
 ul li,
 ol li {
   display: block;
@@ -294,7 +304,7 @@ h6,
 
   h3,
   .heading-3 {
-    font-size: 32px;
+    font-size: 35px;
     line-height: 1.2;
   }
 
@@ -5045,10 +5055,6 @@ h3 + img {
 
 .row-50:empty {
   margin-bottom: 0;
-}
-
-.row-50 > * {
-  margin-bottom: 50px;
 }
 
 .row-xl-50 {
@@ -15855,16 +15861,9 @@ h4 {
 
 .heading-decorate {
   color: #615148;
-  font-size: 24px;
 }
 
-.divider {
-  display: block;
-  width: 50px;
-  height: 4px;
-  background-color: #615148;
-  margin: 10px 0;
-}
+
 
 .quote-box {
   border: 2px solid black;
