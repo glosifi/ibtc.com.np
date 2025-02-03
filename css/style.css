@@ -7472,6 +7472,8 @@ html.tablet .ui-to-top {
   box-shadow: none;
   background: #ffffff;
   border-bottom: 1px solid #eaeced;
+  justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
@@ -15467,107 +15469,95 @@ html[class*="ie"] .dtp-hour-hand {
 }
 
 /* Footer Styling */
-.footer-minimal {
-  padding: 50px 0 20px 0;
+footer {
   background-color: #f1dece;
-  color: #fff;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e9ecef;
 }
 
-@media (max-width: 576px) {
-  .footer-minimal {
-    padding: 20px 0;
-  }
-}
-
-.footer-columns {
+.footer-content {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.footer-column {
-  margin-bottom: 20px;
+.footer-section {
+  margin: 10px;
+  text-align: center;
 }
 
-.footer-column h4 {
-  font-size: 18px;
-  font-weight: bold;
+.footer-section input {
+  padding: 12px;
+}
+
+.footer-section img {
+  width: 100px;
+  height: auto;
+}
+
+.footer-section h4 {
   margin-bottom: 15px;
+  font-size: 16px;
+  color: #000;
+}
+.footer-section p {
+  margin-bottom: 12px;
+  font-size: 12px;
+  color: #000;
 }
 
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 10px;
-}
-
-.footer-column ul li a {
+.footer-section a {
+  display: block;
   color: #000;
   text-decoration: none;
-  transition: color 0.3s;
-}
-
-.footer-column ul li a:hover {
-  color: #615148;
-}
-
-.footer-social a {
-  color: #000;
-  margin-right: 10px;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-
-.footer-social a:hover {
-  color: #615148;
-}
-
-.rights {
+  margin-bottom: 10px;
   font-size: 14px;
-  color: #615148;
 }
 
-/* Responsive Design */
-/* @media (max-width: 768px) {
-  .footer-columns {
+.footer-section a:hover {
+  color: #ee95ab;
+}
+
+.footer-ibtclogo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #000;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+  color: #000;
+  font-size: 20px;
+}
+
+.social-links a:hover {
+  color: #ee95ab;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
     flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
-  .footer-column {
-    margin-bottom: 20px;
+  .footer-section {
+    margin: 20px 0;
   }
 
-  .footer-brand img {
-    margin-bottom: 20px;
-    max-width: 100%;
+  .footer-section input {
+    width: 100%;
+    margin-bottom: 10px;
   }
-} */
-
-@media (max-width: 576px) {
-  .footer-social a {
-    font-size: 18px;
-    margin-right: 8px;
-  }
-
-  .footer-column h4 {
-    font-size: 16px;
-  }
-
-  .footer-column ul li {
-    font-size: 14px;
-  }
-}
-
-.category-container {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 10px;
 }
 
 h4 {
@@ -15653,7 +15643,6 @@ h4 {
 
 .banner-section {
   background-color: #f7f7f7;
-  border-radius: 15px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Light shadow for subtle depth */
   text-align: center;
   position: relative;
@@ -15679,9 +15668,8 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
   z-index: 1; /* Ensure it's behind the content */
-  border-radius: 15px;
 }
 
 .banner-overlay .container {
@@ -15740,7 +15728,7 @@ h4 {
 }
 
 .banner {
-  background-color: pink;
+  background-color: #f1dece;
 }
 
 .banner-content {
@@ -15757,6 +15745,7 @@ h4 {
 
 .text-section h3 {
   font-weight: 500;
+  margin-top: 10px;
 }
 
 .text-section p {
@@ -15862,8 +15851,6 @@ h4 {
 .heading-decorate {
   color: #615148;
 }
-
-
 
 .quote-box {
   border: 2px solid black;
