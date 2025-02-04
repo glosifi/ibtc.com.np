@@ -1,0 +1,199 @@
+body {
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+.bg-pink {
+  background-color: #f1dece;
+}
+
+.text-custom {
+  color: #615148;
+}
+
+.font-family a {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+/* Base styles for small screens (mobile-first) */
+h1,
+.heading-1 {
+  font-size: 30px !important;
+  line-height: 1.5 !important;
+  font-weight: 700 !important;
+}
+
+h2,
+.heading-2 {
+  font-size: 25px !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0.06em !important;
+  font-family: "Playfair Display", "Times New Roman", Times, serif;
+}
+
+h3,
+.heading-3 {
+  font-size: 20px !important;
+  line-height: 1 !important;
+}
+
+h4,
+.heading-4 {
+  font-size: 18px !important;
+  line-height: 1.5 !important;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+  color: white;
+}
+
+h5,
+.heading-5 {
+  font-size: 16px !important;
+  line-height: 1.44444 !important;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+  color: #2b2c2f !important;
+}
+
+h6,
+.heading-6 {
+  font-size: 14px !important;
+  line-height: 1.42857 !important;
+  text-transform: uppercase !important;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* Medium screens (tablets, min-width: 768px) */
+@media (min-width: 768px) {
+  h1,
+  .heading-1 {
+    font-size: 36px !important;
+  }
+
+  h2,
+  .heading-2 {
+    font-size: 30px !important;
+  }
+
+  h3,
+  .heading-3 {
+    font-size: 26px !important;
+  }
+
+  h4,
+  .heading-4 {
+    font-size: 20px !important;
+  }
+
+  h5,
+  .heading-5 {
+    font-size: 20px !important;
+  }
+
+  h6,
+  .heading-6 {
+    font-size: 16px !important;
+  }
+}
+
+/* Large screens (desktops, min-width: 1200px) */
+@media (min-width: 1200px) {
+  h1,
+  .heading-1 {
+    font-size: 60px !important;
+    line-height: 1.2 !important;
+  }
+
+  h2,
+  .heading-2 {
+    font-size: 48px !important;
+    line-height: 1.45833 !important;
+  }
+
+  h3,
+  .heading-3 {
+    font-size: 35px !important;
+    line-height: 1.2 !important;
+  }
+
+  h4,
+  .heading-4 {
+    font-size: 20px !important;
+    line-height: 1.25 !important;
+  }
+
+  h5,
+  .heading-5 {
+    font-size: 18px !important;
+  }
+
+  h6,
+  .heading-6 {
+    font-size: 14px !important;
+  }
+}
+
+.btn-primary {
+  border-radius: 3px;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: 0.33s;
+}
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus {
+  color: #ffffff;
+  background: #65564e;
+  border-color: #65564e;
+}
+
+.btn-primary:hover {
+  color: #ffffff;
+  background: #000000;
+  border-color: #000000;
+}
+
+/* Ensure smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile Menu (Initially hidden and off-screen) */
+#mobile-menu {
+  transform: translateX(100%); /* Hide the menu off-screen */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Active state for mobile menu */
+#mobile-menu.active {
+  transform: translateX(0); /* Show the mobile menu */
+}
+
+/* Hamburger icon cross effect */
+#hamburger-btn.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+#hamburger-btn.active .bar:nth-child(2) {
+  opacity: 0; /* Hide the middle bar */
+}
+
+#hamburger-btn.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
