@@ -1,464 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link href="css/style.css" rel="stylesheet" />
-
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Lato:300i,400,400i,700%7CMontserrat:400,500,600,700%7CPlayfair+Display:400,700,700i%7COswald:400,700,700i"
-    />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header
-      id="navbar"
-      class="bg-white fixed top-0 left-0 w-full z-10 transition-all duration-300"
-    >
-      <div class="container mx-auto px-4">
-        <nav class="flex items-center justify-between py-4">
-          <div class="flex items-center">
-            <div class="ml-4">
-              <a href="index.html" class="flex items-center">
-                <img
-                  id="logo"
-                  src="assets/ibtc-logo.svg"
-                  alt="International Beauty Parlor and Training Center"
-                  class="w-16 h-auto transition-all duration-300"
-                />
-                <p
-                  class="ml-2 text-lg hidden md:block font-semibold text-gray-700"
-                >
-                  International Beauty Parlor and Training Center
-                </p>
-              </a>
-            </div>
-          </div>
-
-          <!-- Hamburger Menu Button (for mobile) -->
-          <div class="lg:hidden flex items-center">
-            <button class="text-gray-700 focus:outline-none" id="hamburger-btn">
-              <span class="block w-6 h-1 bg-gray-700 mb-1"></span>
-              <span class="block w-6 h-1 bg-gray-700 mb-1"></span>
-              <span class="block w-6 h-1 bg-gray-700"></span>
-            </button>
-          </div>
-
-          <!-- Desktop Menu -->
-          <div class="hidden lg:flex space-x-6">
-            <a
-              href="index.html"
-              class="text-gray-700 text-lg hover:text-gray-900"
-              >Home</a
-            >
-            <a
-              href="#services"
-              class="text-gray-700 text-lg hover:text-gray-900"
-              >Services</a
-            >
-            <a
-              href="#contact-us"
-              class="text-gray-700 text-lg hover:text-gray-900"
-              >Contact</a
-            >
-          </div>
-        </nav>
-      </div>
-
-      <!-- Mobile Menu (Initially hidden) -->
-      <div
-        class="fixed top-0 right-0 bg-white w-3/4 h-full transform translate-x-full transition-all duration-300 lg:hidden"
-        id="mobile-menu"
-      >
-        <div class="flex justify-end p-4">
-          <button id="close-btn" class="text-gray-700">
-            <svg
-              class="w-6 h-6"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="flex flex-col items-center space-y-6">
-          <a href="index.html" class="text-gray-700 text-lg hover:text-gray-900"
-            >Home</a
-          >
-          <a href="#services" class="text-gray-700 text-lg hover:text-gray-900"
-            >Services</a
-          >
-          <a
-            href="#contact-us"
-            class="text-gray-700 text-lg hover:text-gray-900"
-            >Contact</a
-          >
-        </div>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty Parlor | IBTC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f8b1c2;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #e0788c;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .hero {
+            background-color: #ffe5ec;
+            padding: 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: #e0788c;
+        }
+        .services {
+            padding: 2rem;
+            text-align: center;
+        }
+        .services h2 {
+            color: #e0788c;
+        }
+        .services p {
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+        footer {
+            background-color: #f8b1c2;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to International Beauty Parlour and Training Center</h1>
+        <p>Website in Progres</p>
+        <p>Design, Developed and Maintained by Glosifi.com</p>
     </header>
-
-    <main>
-      <!-- Hero Section -->
-      <section class="bg-white py-28">
-        <div
-          class="container mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between px-4"
-        >
-          <!-- Left Section -->
-          <div class="flex-1 px-4 mb-6 md:mb-0">
-            <h1
-              class="text-4xl md:text-4xl font-semibold text-custom mb-4 md:mb-8"
-            >
-              Get Your Personalized Beauty Care
-            </h1>
-            <h4 class="text-lg md:text-xl text-custom mb-4 md:mb-6">
-              With Exceptional Service <br />
-              And World-Class Training
-            </h4>
-          </div>
-
-          <!-- Right Section (Image) -->
-          <div class="flex-1 flex justify-center">
-            <img
-              src="assets/Background Image.png"
-              alt="Beauty Services"
-              class="max-w-full rounded-lg"
-            />
-          </div>
-        </div>
-      </section>
-
-      <!-- Beauty Services Section -->
-      <section class="bg-gray-100 py-8 md:py-16">
-        <div
-          class="container mx-auto flex flex-wrap flex-col md:flex-row items-center px-4"
-        >
-          <!-- Image Container -->
-          <div class="flex-1 mb-8 md:mb-0 md:mr-8">
-            <div class="quote-with-image">
-              <img
-                src="assets/Placeholder Image.png"
-                alt="Beauty Parlor"
-                class="w-full rounded-lg"
-              />
-            </div>
-          </div>
-          <!-- Content Container -->
-          <div class="flex-1">
-            <div>
-              <h2 class="text-3xl font-semibold text-custom mb-4">
-                Look & Feel Your Best
-              </h2>
-              <span class="block w-16 h-1 bg-gray-800 mb-6"></span>
-              <p class="text-xl text-gray-800 mb-6">
-                Whether you're in need of a quick refresh or a complete
-                makeover, our talented team will ensure you look and feel your
-                best.
-              </p>
-            </div>
-            <div class="bg-gray-200 p-4 rounded-lg mb-6">
-              <p class="text-lg italic text-custom">
-                Beauty is unique to every individual
-              </p>
-            </div>
-            <p class="text-xl text-gray-800">
-              Receive personalized care tailored to your needs, enhancing your
-              natural beauty and highlighting your features.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!--Banner section-->
-      <section class="bg-gray-100 py-8 md:py-16">
-        <div
-          class="container mx-auto flex flex-wrap flex-col md:flex-row items-center px-4"
-        >
-          <!-- Text Section -->
-          <div class="flex-1 mb-8 md:mb-0 md:pr-8">
-            <div class="mb-8">
-              <img
-                src="assets/Glosifi.png"
-                alt="glosifi logo"
-                class="w-32 mb-4"
-              />
-            </div>
-            <h3 class="text-3xl font-semibold text-custom mb-4">
-              Empowering Beauty and Wellness Globally.
-            </h3>
-            <p class="text-lg text-gray-700 mb-6">
-              Welcome to Glosifi, where we’re transforming the beauty and
-              wellness industry through technology. Glosifi is more than just a
-              booking application; it’s a comprehensive platform designed to
-              connect beauty and wellness service providers with clients
-              seamlessly.
-            </p>
-            <button
-              class="btn-primary text-white py-2 px-6 rounded-lg  transition-colors"
-            >
-              Discover Glosifi
-            </button>
-          </div>
-          <!-- Image Section -->
-          <div class="flex-1">
-            <div>
-              <img
-                src="assets/glosifi-banner.png"
-                alt="banner"
-                class="w-full rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services -->
-      <section class="py-8 md:py-16" id="services">
-        <div class="container mx-auto px-6">
-          <!-- Increased padding from px-4 to px-6 -->
-          <div
-            class="flex md:flex-row flex-col gap-2 md:gap-40 items-center justify-between"
-          >
-            <!-- Text Section -->
-            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
-              <div>
-                <h2 class="text-3xl font-semibold text-custom mb-6">
-                  <!-- Increased margin-bottom -->
-                  Our Services
-                </h2>
-                <span class="block w-16 h-1 bg-gray-800 mb-6"></span>
-                <!-- Increased margin-bottom -->
-                <p class="text-lg text-gray-800 mb-6">
-                  A full range of salon treatments, styling services, and
-                  professional training offered by our expert stylists.
-                </p>
-                <p class="text-gray-700 mb-6">
-                  Our goal is to cater to all your beauty needs and enhance your
-                  natural beauty, leaving you feeling confident and empowered.
-                </p>
-                <a
-                  href="https://glosifi.com/organization/1/branches/3"
-                  target="_blank"
-                  class="btn-primary text-white py-2 px-6 rounded-lg  transition-colors"
-                >
-                  Book Now
-                </a>
-              </div>
-            </div>
-
-            <!-- Service Categories -->
-            <div class="w-full lg:w-1/2">
-              <div class="flex gap-8">
-                <!-- Adjusted flex-wrap for spacing -->
-                <!-- Beauty Services Category -->
-                <div class="w-full lg:w-1/2 mb-8">
-                  <h5 class="text-xl font-semibold text-gray-800 mb-4">
-                    <!-- Increased margin-bottom -->
-                    Beauty Services
-                  </h5>
-                  <ul class="list-disc pl-5 text-gray-700">
-                    <li>Nails</li>
-                    <li>Hair Styling</li>
-                    <li>Facials & Skincare</li>
-                    <li>Hair Removal</li>
-                  </ul>
-                </div>
-
-                <!-- Trainings Category -->
-                <div class="w-full lg:w-1/2 mb-8">
-                  <h5 class="text-xl font-semibold text-gray-800 mb-4">
-                    <!-- Increased margin-bottom -->
-                    Trainings
-                  </h5>
-                  <ul class="list-disc pl-5 text-gray-700">
-                    <li>Nails</li>
-                    <li>Hair Styling</li>
-                    <li>Facials & Skincare</li>
-                    <li>Hair Removal</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!--professtional team-->
-      <section class="py-8 md:py-16 text-center bg-gray-100">
-        <div class="container mx-auto px-4">
-          <h2 class="text-3xl font-semibold text-custom mb-4">
-            Our Professional Team
-          </h2>
-          <h4 class="text-lg text-gray-700 mb-8">
-            Experienced beauty professionals dedicated to providing
-            personalized, high-quality services.
-          </h4>
-          <div class="w-16 h-1 bg-gray-800 mb-8 mx-auto"></div>
-
-          <!-- Image Grid -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="flex flex-col items-center">
-              <img
-                src="assets/slider.png"
-                alt="Team Member 1"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <div>
-                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
-                <span class="text-gray-600">Beauty Expert</span>
-              </div>
-            </div>
-            <div class="flex flex-col items-center">
-              <img
-                src="assets/slider.png"
-                alt="Team Member 2"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <div>
-                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
-                <span class="text-gray-600">Beauty Expert</span>
-              </div>
-            </div>
-            <div class="flex flex-col items-center">
-              <img
-                src="assets/slider.png"
-                alt="Team Member 3"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <div>
-                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
-                <span class="text-gray-600">Beauty Expert</span>
-              </div>
-            </div>
-            <div class="flex flex-col items-center">
-              <img
-                src="assets/slider.png"
-                alt="Team Member 4"
-                class="w-full h-auto rounded-lg mb-4"
-              />
-              <div>
-                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
-                <span class="text-gray-600">Beauty Expert</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        class="relative bg-gradient-to-r from-gray-500 to-black text-center text-white py-8 md:py-16"
-      >
-        <div class="container px-4">
-          <h2 class="text-3xl font-semibold text-white mb-4">
-            Skin Care, Makeup, Hair Care, Nail Art...
-          </h2>
-          <p class="text-lg text-white mb-8">
-            We combine modern aesthetics with the latest beauty trends.
-          </p>
-          <div class="w-16 h-1 bg-white mb-8 mx-auto"></div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer class="bg-pink text-white mt-8 pt-8 md:pt-12 pb-8">
-        <div
-          class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4"
-        >
-          <!-- Logo and Copyright Section -->
-          <div class="footer-section text-center lg:text-left">
-            <div
-              class="flex flex-col items-center lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-4"
-            >
-              <img
-                src="assets/ibtc-logo.svg"
-                alt="ibtc logo"
-                class="w-20 h-auto"
-              />
-              <p class="text-black">International Beauty and Training Center</p>
-            </div>
-          </div>
-
-          <!-- Company Links Section -->
-          <div class="footer-section text-center lg:text-left text-black">
-            <h4 class="font-semibold text-black mb-2 md:mb-4">Company</h4>
-            <a href="#" class="block hover:text-black">About Us</a>
-            <a href="#" class="block hover:text-black">Blog</a>
-            <a href="#" class="block hover:text-black">Contact Us</a>
-          </div>
-
-          <!-- Support and Contact Section -->
-          <div class="footer-section text-center lg:text-left text-black">
-            <h4 class="font-semibold text-black mb-2 md:mb-4">Support</h4>
-            <a href="#" class="block hover:text-black">Help Center</a>
-            <a href="#" class="block hover:text-black">Terms of Service</a>
-            <a href="#" class="block hover:text-black">Pricing Policy</a>
-          </div>
-
-          <!--Contact Us-->
-          <div class="footer-section text-center lg:text-left">
-            <h4 class="font-semibold text-black mb-2 md:mb-4">Contact Us</h4>
-            <p class="text-black">
-              <strong>Phone:</strong>
-              <a href="tel:+1234567890" class="text-black hover:underline"
-                >+123 456 7890</a
-              >
-            </p>
-            <p class="text-black">
-              <strong>Email:</strong>
-              <a
-                href="mailto:contact@shantajbeauty.com"
-                class="text-black hover:underline"
-                >contact@shantajbeauty.com</a
-              >
-            </p>
-            <p class="text-black">
-              <strong>Address:</strong> New Baneswor, Kathmandu, Nepal
-            </p>
-
-            <div class="footer-section text-center lg:text-left">
-              <div class="social-links space-x-4 mt-4">
-                <a href="#" class="text-black hover:text-blue-500"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a href="#" class="text-black hover:text-blue-400"
-                  ><i class="fab fa-twitter"></i
-                ></a>
-                <a href="#" class="text-black hover:text-pink-500"
-                  ><i class="fab fa-instagram"></i
-                ></a>
-                <a href="#" class="text-black hover:text-blue-600"
-                  ><i class="fab fa-linkedin-in"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center mt-8">
-          <p class="text-black">
-            Copyright &copy; 2025 Glossybyte <br />
-            <span class="text-black">All rights reserved</span>
-          </p>
-        </div>
-      </footer>
-    </main>
-
-    <script src="js/script.js"></script>
-  </body>
+  
+    <footer>
+        <p>&copy; 2024 IBTC Beauty Parlor. All Rights Reserved.</p>
+        <p>Website in Progress</p>
+    </footer>
+</body>
 </html>
