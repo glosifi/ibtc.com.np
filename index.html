@@ -1,189 +1,184 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html lang="en">
   <head>
-    <title>Beauty Salon</title>
-    <meta name="format-detection" content="telephone=no" />
-    <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <link rel="icon" href="images/letter-i (1).png" type="image/x-icon" />
-    <!-- Stylesheets-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       type="text/css"
       href="//fonts.googleapis.com/css?family=Lato:300i,400,400i,700%7CMontserrat:400,500,600,700%7CPlayfair+Display:400,700,700i%7COswald:400,700,700i"
     />
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .ie-panel {
-        display: none;
-        background: #212121;
-        padding: 10px 0;
-        box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.3);
-        clear: both;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-      html.ie-10 .ie-panel,
-      html.lt-ie-10 .ie-panel {
-        display: block;
-      }
-    </style>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="ie-panel">
-      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
-        <img
-          src="images/ie8-panel/warning_bar_0000_us.jpg"
-          height="42"
-          width="820"
-          alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."
-        />
-      </a>
-    </div>
+    <header
+      id="navbar"
+      class="bg-white fixed top-0 left-0 w-full z-10 transition-all duration-300"
+    >
+      <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between py-4">
+          <div class="flex items-center">
+            <div class="ml-4">
+              <a href="index.html" class="flex items-center">
+                <img
+                  id="logo"
+                  src="assets/ibtc-logo.svg"
+                  alt="International Beauty Parlor and Training Center"
+                  class="w-16 h-auto transition-all duration-300"
+                />
+                <p
+                  class="ml-2 text-lg hidden md:block font-semibold text-gray-700"
+                >
+                  International Beauty Parlor and Training Center
+                </p>
+              </a>
+            </div>
+          </div>
 
-    <div class="preloader">
-      <div class="preloader-body">
-        <div class="cssload-jumping">
-          <span></span><span></span><span></span><span></span><span></span>
+          <!-- Hamburger Menu Button (for mobile) -->
+          <div class="lg:hidden flex items-center">
+            <button class="text-gray-700 focus:outline-none" id="hamburger-btn">
+              <span class="block w-6 h-1 bg-gray-700 mb-1"></span>
+              <span class="block w-6 h-1 bg-gray-700 mb-1"></span>
+              <span class="block w-6 h-1 bg-gray-700"></span>
+            </button>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex space-x-6">
+            <a
+              href="index.html"
+              class="text-gray-700 text-lg hover:text-gray-900"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="text-gray-700 text-lg hover:text-gray-900"
+              >Services</a
+            >
+            <a
+              href="#contact-us"
+              class="text-gray-700 text-lg hover:text-gray-900"
+              >Contact</a
+            >
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile Menu (Initially hidden) -->
+      <div
+        class="fixed top-0 right-0 bg-white w-3/4 h-full transform translate-x-full transition-all duration-300 lg:hidden"
+        id="mobile-menu"
+      >
+        <div class="flex justify-end p-4">
+          <button id="close-btn" class="text-gray-700">
+            <svg
+              class="w-6 h-6"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-col items-center space-y-6">
+          <a href="index.html" class="text-gray-700 text-lg hover:text-gray-900"
+            >Home</a
+          >
+          <a href="#services" class="text-gray-700 text-lg hover:text-gray-900"
+            >Services</a
+          >
+          <a
+            href="#contact-us"
+            class="text-gray-700 text-lg hover:text-gray-900"
+            >Contact</a
+          >
         </div>
       </div>
-    </div>
+    </header>
 
-    <div class="page">
-      <!-- Page Header -->
-      <header class="section page-header">
-        <div class="rd-navbar-wrap">
-          <nav
-            class="rd-navbar rd-navbar-classic"
-            data-layout="rd-navbar-fixed"
-            data-sm-layout="rd-navbar-fixed"
-            data-md-layout="rd-navbar-fixed"
-            data-md-device-layout="rd-navbar-fixed"
-            data-lg-layout="rd-navbar-static"
-            data-lg-device-layout="rd-navbar-static"
-            data-xl-layout="rd-navbar-static"
-            data-xl-device-layout="rd-navbar-static"
-            data-lg-stick-up-offset="46px"
-            data-xl-stick-up-offset="46px"
-            data-xxl-stick-up-offset="46px"
-            data-lg-stick-up="true"
-            data-xl-stick-up="true"
-            data-xxl-stick-up="true"
-          >
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <div class="rd-navbar-panel">
-                  <button
-                    class="rd-navbar-toggle"
-                    data-rd-navbar-toggle=".rd-navbar-nav-wrap"
-                  >
-                    <span></span>
-                  </button>
-                  <div class="rd-navbar-brand">
-                    <a class="brand" href="index.html">
-                      <img
-                        src="images/ibtc-logo.svg"
-                        alt="International Beauty Parlor and Training Center"
-                        width="257"
-                        height="84"
-                      />
-                      <p>International Beauty Parlor and Training Center</p>
-                    </a>
-                  </div>
-                </div>
-                <div class="rd-navbar-main-element">
-                  <div class="rd-navbar-nav-wrap">
-                    <ul class="rd-navbar-nav">
-                      <li class="rd-nav-item active">
-                        <a class="rd-nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#services">Services</a>
-                      </li>
-                      <li class="rd-nav-item">
-                        <a class="rd-nav-link" href="#contact-us">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-
+    <main>
       <!-- Hero Section -->
-      <section class="hero-section">
+      <section class="bg-white py-28">
         <div
-          class="container container-custom"
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-          "
+          class="container mx-auto flex flex-col md:flex-row flex-wrap items-center justify-between px-4"
         >
-          <div
-            class="hero-text-container"
-            style="flex: 1; padding: 20px 20px 20px 0"
-          >
+          <!-- Left Section -->
+          <div class="flex-1 px-4 mb-6 md:mb-0">
             <h1
-              class="heading-decorate"
-              style="color: #615148; margin-bottom: 30px"
+              class="text-4xl md:text-4xl font-semibold text-custom mb-4 md:mb-8"
             >
               Get Your Personalized Beauty Care
             </h1>
-            <h4 style="color: #615148; margin-bottom: 20px">
+            <h4 class="text-lg md:text-xl text-custom mb-4 md:mb-6">
               With Exceptional Service <br />
               And World-Class Training
             </h4>
           </div>
-          <div
-            class="hero-image-container"
-            style="flex: 1; display: flex; justify-content: center"
-          >
+
+          <!-- Right Section (Image) -->
+          <div class="flex-1 flex justify-center">
             <img
-              src="images/Background Image.png"
+              src="assets/Background Image.png"
               alt="Beauty Services"
-              style="max-width: 100%; border-radius: 15px"
+              class="max-w-full rounded-lg"
             />
           </div>
         </div>
       </section>
 
       <!-- Beauty Services Section -->
-      <section class="section section-lg bg-gray-100">
-        <div class="flex-layout container">
-          <div class="image-container">
+      <section class="bg-gray-100 py-8 md:py-16">
+        <div
+          class="container mx-auto flex flex-wrap flex-col md:flex-row items-center px-4"
+        >
+          <!-- Image Container -->
+          <div class="flex-1 mb-8 md:mb-0 md:mr-8">
             <div class="quote-with-image">
               <img
-                src="images/Placeholder Image.png"
+                src="assets/Placeholder Image.png"
                 alt="Beauty Parlor"
-                class="responsive-img"
+                class="w-full rounded-lg"
               />
             </div>
           </div>
-          <div class="content-container">
+          <!-- Content Container -->
+          <div class="flex-1">
             <div>
-              <h2 class="heading-decorate">Look & Feel Your Best</h2>
-              <span class="divider"></span>
-              <p class="big text-gray-800">
+              <h2 class="text-3xl font-semibold text-custom mb-4">
+                Look & Feel Your Best
+              </h2>
+              <span class="block w-16 h-1 bg-gray-800 mb-6"></span>
+              <p class="text-xl text-gray-800 mb-6">
                 Whether you're in need of a quick refresh or a complete
                 makeover, our talented team will ensure you look and feel your
                 best.
               </p>
             </div>
-            <div class="quote-box">
-              <p>Beauty is unique to every individual</p>
+            <div class="bg-gray-200 p-4 rounded-lg mb-6">
+              <p class="text-lg italic text-custom">
+                Beauty is unique to every individual
+              </p>
             </div>
-            <p class="big text-gray-800">
+            <p class="text-xl text-gray-800">
               Receive personalized care tailored to your needs, enhancing your
               natural beauty and highlighting your features.
             </p>
@@ -191,76 +186,108 @@
         </div>
       </section>
 
-      <section class="banner">
-        <div class="banner-content">
-          <div class="text-section">
-            <div>
-              <img src="images/Glosifi.png" alt="glosifi logo" class="logo" />
+      <!--Banner section-->
+      <section class="bg-gray-100 py-8 md:py-16">
+        <div
+          class="container mx-auto flex flex-wrap flex-col md:flex-row items-center px-4"
+        >
+          <!-- Text Section -->
+          <div class="flex-1 mb-8 md:mb-0 md:pr-8">
+            <div class="mb-8">
+              <img
+                src="assets/Glosifi.png"
+                alt="glosifi logo"
+                class="w-32 mb-4"
+              />
             </div>
-            <h3>Empowering Beauty and Wellness Globally.</h3>
-            <p>
+            <h3 class="text-3xl font-semibold text-custom mb-4">
+              Empowering Beauty and Wellness Globally.
+            </h3>
+            <p class="text-lg text-gray-700 mb-6">
               Welcome to Glosifi, where we’re transforming the beauty and
               wellness industry through technology. Glosifi is more than just a
               booking application; it’s a comprehensive platform designed to
               connect beauty and wellness service providers with clients
               seamlessly.
             </p>
-            <button class="discover-btn">Discover Glosifi</button>
+            <button
+              class="btn-primary text-white py-2 px-6 rounded-lg  transition-colors"
+            >
+              Discover Glosifi
+            </button>
           </div>
-          <div class="image-section">
+          <!-- Image Section -->
+          <div class="flex-1">
             <div>
               <img
-                src="images/glosifi-banner.png"
+                src="assets/glosifi-banner.png"
                 alt="banner"
-                class="banner-image"
+                class="w-full rounded-lg"
               />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Our Services Section -->
-      <section class="section section-lg" id="services">
-        <div class="container">
+      <!-- Services -->
+      <section class="py-8 md:py-16" id="services">
+        <div class="container mx-auto px-6">
+          <!-- Increased padding from px-4 to px-6 -->
           <div
-            class="row row-50 align-items-lg-center justify-content-xl-between"
+            class="flex md:flex-row flex-col gap-2 md:gap-40 items-center justify-between"
           >
-            <div class="col-12 col-lg-6">
-              <div class="block-xs">
-                <h2 class="heading-decorate" style="color: #615148">
+            <!-- Text Section -->
+            <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+              <div>
+                <h2 class="text-3xl font-semibold text-custom mb-6">
+                  <!-- Increased margin-bottom -->
                   Our Services
                 </h2>
-                <span class="divider"></span>
-                <p class="big text-gray-800">
+                <span class="block w-16 h-1 bg-gray-800 mb-6"></span>
+                <!-- Increased margin-bottom -->
+                <p class="text-lg text-gray-800 mb-6">
                   A full range of salon treatments, styling services, and
                   professional training offered by our expert stylists.
                 </p>
-                <p>
+                <p class="text-gray-700 mb-6">
                   Our goal is to cater to all your beauty needs and enhance your
                   natural beauty, leaving you feeling confident and empowered.
                 </p>
                 <a
-                  class="button button-primary"
                   href="https://glosifi.com/organization/1/branches/3"
                   target="_blank"
-                  >Book Now</a
+                  class="btn-primary text-white py-2 px-6 rounded-lg  transition-colors"
                 >
+                  Book Now
+                </a>
               </div>
             </div>
-            <div class="row">
-              <div class="col-12 d-flex gap">
-                <div class="category-container col-lg-6 mb-4">
-                  <h5>Beauty Services</h5>
-                  <ul>
+
+            <!-- Service Categories -->
+            <div class="w-full lg:w-1/2">
+              <div class="flex gap-8">
+                <!-- Adjusted flex-wrap for spacing -->
+                <!-- Beauty Services Category -->
+                <div class="w-full lg:w-1/2 mb-8">
+                  <h5 class="text-xl font-semibold text-gray-800 mb-4">
+                    <!-- Increased margin-bottom -->
+                    Beauty Services
+                  </h5>
+                  <ul class="list-disc pl-5 text-gray-700">
                     <li>Nails</li>
                     <li>Hair Styling</li>
                     <li>Facials & Skincare</li>
                     <li>Hair Removal</li>
                   </ul>
                 </div>
-                <div class="category-container col-lg-6 mb-4">
-                  <h5>Trainings</h5>
-                  <ul>
+
+                <!-- Trainings Category -->
+                <div class="w-full lg:w-1/2 mb-8">
+                  <h5 class="text-xl font-semibold text-gray-800 mb-4">
+                    <!-- Increased margin-bottom -->
+                    Trainings
+                  </h5>
+                  <ul class="list-disc pl-5 text-gray-700">
                     <li>Nails</li>
                     <li>Hair Styling</li>
                     <li>Facials & Skincare</li>
@@ -273,151 +300,165 @@
         </div>
       </section>
 
-      <!-- Professional Team Section -->
-      <section class="section section-md section-lg bg-default text-center">
-        <div class="container">
-          <h2 style="color: #615148">Our Professional Team</h2>
-          <h4>
+      <!--professtional team-->
+      <section class="py-8 md:py-16 text-center bg-gray-100">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-semibold text-custom mb-4">
+            Our Professional Team
+          </h2>
+          <h4 class="text-lg text-gray-700 mb-8">
             Experienced beauty professionals dedicated to providing
             personalized, high-quality services.
           </h4>
-          <div class="divider-lg"></div>
+          <div class="w-16 h-1 bg-gray-800 mb-8 mx-auto"></div>
 
           <!-- Image Grid -->
-          <div class="image-grid">
-            <div class="image-item">
-              <img src="images/slider.png" alt="Team Member 1" />
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="flex flex-col items-center">
+              <img
+                src="assets/slider.png"
+                alt="Team Member 1"
+                class="w-full h-auto rounded-lg mb-4"
+              />
               <div>
-                <p>Ameet Kilambu</p>
-                <span>Beauty Expert</span>
+                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
+                <span class="text-gray-600">Beauty Expert</span>
               </div>
             </div>
-            <div class="image-item">
-              <img src="images/slider.png" alt="Team Member 2" />
+            <div class="flex flex-col items-center">
+              <img
+                src="assets/slider.png"
+                alt="Team Member 2"
+                class="w-full h-auto rounded-lg mb-4"
+              />
               <div>
-                <p>Ameet Kilambu</p>
-                <span>Beauty Expert</span>
+                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
+                <span class="text-gray-600">Beauty Expert</span>
               </div>
             </div>
-            <div class="image-item">
-              <img src="images/slider.png" alt="Team Member 3" />
+            <div class="flex flex-col items-center">
+              <img
+                src="assets/slider.png"
+                alt="Team Member 3"
+                class="w-full h-auto rounded-lg mb-4"
+              />
               <div>
-                <p>Ameet Kilambu</p>
-                <span>Beauty Expert</span>
+                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
+                <span class="text-gray-600">Beauty Expert</span>
               </div>
             </div>
-            <div class="image-item">
-              <img src="images/slider.png" alt="Team Member 4" />
+            <div class="flex flex-col items-center">
+              <img
+                src="assets/slider.png"
+                alt="Team Member 4"
+                class="w-full h-auto rounded-lg mb-4"
+              />
               <div>
-                <p>Ameet Kilambu</p>
-                <span>Beauty Expert</span>
+                <p class="font-semibold text-gray-800">Ameet Kilambu</p>
+                <span class="text-gray-600">Beauty Expert</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Beauty Treatments Section -->
       <section
-        class="section banner-section section-lg bg-default text-center banner-overlay"
-        style="
-          background-image: url(images/makeup.jpg);
-          background-size: cover;
-          background-position: center;
-        "
+        class="relative bg-gradient-to-r from-gray-500 to-black text-center text-white py-8 md:py-16"
       >
-        <div class="overlay"></div>
-        <!-- Added overlay here -->
-        <div class="container" style="padding: 60px 0">
-          <h2 style="color: #fffefd">
+        <div class="container px-4">
+          <h2 class="text-3xl font-semibold text-white mb-4">
             Skin Care, Makeup, Hair Care, Nail Art...
           </h2>
-          <p class="big text-white">
+          <p class="text-lg text-white mb-8">
             We combine modern aesthetics with the latest beauty trends.
           </p>
-          <div class="divider-lg"></div>
+          <div class="w-16 h-1 bg-white mb-8 mx-auto"></div>
         </div>
       </section>
 
-      <!--Contact Us Section-->
-      <section id="contact-us" class="contact-section section-lg text-center">
-        <div class="container">
-          <h2 style="color: #615148">Contact Us</h2>
-          <div class="divider-lg"></div>
-          <div class="contact-details-horizontal">
-            <div class="contact-item-horizontal">
-              <h4>Phone & Mobile</h4>
-              <div class="num-row">
-                <p><a href="tel:01-4461467">01-4461467</a></p>
-                <p><a href="tel:+977-9840015325">+977-9840015325</a></p>
-              </div>
-            </div>
-            <div class="contact-item-horizontal">
-              <h4>Office Address</h4>
-              <p>Naya Baneswor, Kathmandu, Nepal</p>
-            </div>
-
-            <div class="contact-item-horizontal">
-              <h4>Business Hours</h4>
-              <p>
-                Mon to Fri: 9:00 AM - 6:00 PM<br />Saturday: 10:00 AM - 4:00 PM
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer Section -->
-      <footer>
-        <div class="footer-content">
-          <div class="footer-section">
-            <div class="footer-ibtclogo">
-              <div>
-                <img src="images/ibtc-logo.svg" alt="ibtc logo" />
-              </div>
-              <div>
-                <p>
-                  Copyright &copy; 2025 Glossybyte <br />
-                  <span>All rights reserved</span>
-                </p>
-              </div>
-            </div>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-          </div>
-          <div class="footer-section">
-            <h4>Company</h4>
-            <a href="#">About us</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact us</a>
-          </div>
-          <div class="footer-section">
-            <h4>Support</h4>
-            <a href="#">Help center</a>
-            <a href="#">Terms of service</a>
-            <a href="#">Pricing policy</a>
-          </div>
-          <div class="footer-section">
-            <h4>Stay up to date</h4>
-            <input type="text" placeholder="Enter Your Email" />
-            <button
-              class="btn button-primary"
+      <!-- Footer -->
+      <footer class="bg-pink text-white mt-8 pt-8 md:pt-12 pb-8">
+        <div
+          class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4"
+        >
+          <!-- Logo and Copyright Section -->
+          <div class="footer-section text-center lg:text-left">
+            <div
+              class="flex flex-col items-center lg:flex-row lg:items-center space-y-4 lg:space-y-0 lg:space-x-4"
             >
-              Submit
-            </button>
+              <img
+                src="assets/ibtc-logo.svg"
+                alt="ibtc logo"
+                class="w-20 h-auto"
+              />
+              <p class="text-black">International Beauty and Training Center</p>
+            </div>
           </div>
+
+          <!-- Company Links Section -->
+          <div class="footer-section text-center lg:text-left text-black">
+            <h4 class="font-semibold text-black mb-2 md:mb-4">Company</h4>
+            <a href="#" class="block hover:text-black">About Us</a>
+            <a href="#" class="block hover:text-black">Blog</a>
+            <a href="#" class="block hover:text-black">Contact Us</a>
+          </div>
+
+          <!-- Support and Contact Section -->
+          <div class="footer-section text-center lg:text-left text-black">
+            <h4 class="font-semibold text-black mb-2 md:mb-4">Support</h4>
+            <a href="#" class="block hover:text-black">Help Center</a>
+            <a href="#" class="block hover:text-black">Terms of Service</a>
+            <a href="#" class="block hover:text-black">Pricing Policy</a>
+          </div>
+
+          <!--Contact Us-->
+          <div class="footer-section text-center lg:text-left">
+            <h4 class="font-semibold text-black mb-2 md:mb-4">Contact Us</h4>
+            <p class="text-black">
+              <strong>Phone:</strong>
+              <a href="tel:+1234567890" class="text-black hover:underline"
+                >+123 456 7890</a
+              >
+            </p>
+            <p class="text-black">
+              <strong>Email:</strong>
+              <a
+                href="mailto:contact@shantajbeauty.com"
+                class="text-black hover:underline"
+                >contact@shantajbeauty.com</a
+              >
+            </p>
+            <p class="text-black">
+              <strong>Address:</strong> New Baneswor, Kathmandu, Nepal
+            </p>
+
+            <div class="footer-section text-center lg:text-left">
+              <div class="social-links space-x-4 mt-4">
+                <a href="#" class="text-black hover:text-blue-500"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="text-black hover:text-blue-400"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a href="#" class="text-black hover:text-pink-500"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a href="#" class="text-black hover:text-blue-600"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <p class="text-black">
+            Copyright &copy; 2025 Glossybyte <br />
+            <span class="text-black">All rights reserved</span>
+          </p>
         </div>
       </footer>
-    </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
-    <!-- Javascript-->
-    <script src="js/core.min.js"></script>
+    </main>
+
     <script src="js/script.js"></script>
-    <script src="js/navbar.js"></script>
   </body>
 </html>
